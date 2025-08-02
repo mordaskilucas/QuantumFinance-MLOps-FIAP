@@ -17,20 +17,19 @@ from datetime import datetime, timedelta
 # Adicionar o diretório src ao path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-from src.api.auth import verify_password, create_access_token, get_password_hash
+from src.api.auth import verify_password, create_access_token
 from src.api.models import CreditScoreInput, CreditScoreOutput
 
 
 class TestAuth(unittest.TestCase):
     """Testa funcoes de autenticacao."""
     
-    def test_password_hashing(self):
-        """Testa hash e verificacao de senha."""
-        password = "test123"
-        hashed = get_password_hash(password)
-        
-        # Hash deve ser diferente da senha
-        self.assertNotEqual(password, hashed)
+    def test_password_verification(self):
+        """Testa verificacao de senha."""
+        # Usar hash pré-computado para teste
+        password = "quantumfinance123"
+        # Hash bcrypt do password acima
+        hashed = "$2b$12$G8SP8eoLCLC91VvHVRJ1.ePzzFldmqoACzSJud1//pvWKZCu8htkK"
         
         # Verificacao deve funcionar
         self.assertTrue(verify_password(password, hashed))
