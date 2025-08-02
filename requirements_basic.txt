@@ -1,0 +1,12 @@
+# Bibliotecas essenciais para começar
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+mlflow
+fastapi
+uvicorn
+streamlit
+joblib
+python-dotenv
