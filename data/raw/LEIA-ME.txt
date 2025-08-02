@@ -1,0 +1,22 @@
+INSTRUÇÕES PARA BAIXAR O DATASET
+=================================
+
+1. Acesse o Kaggle:
+   https://www.kaggle.com/datasets/parisrohan/credit-score-classification
+
+2. Faça login no Kaggle (crie uma conta se necessário)
+
+3. Clique no botão "Download" para baixar o dataset
+
+4. Extraia o arquivo ZIP baixado
+
+5. Copie TODOS os arquivos CSV para esta pasta (data/raw/)
+
+Arquivos esperados:
+- train.csv (ou similar)
+- test.csv (se houver)
+
+IMPORTANTE: Os scripts de preparação de dados procuram por arquivos .csv nesta pasta!
+
+Após colocar os arquivos aqui, execute:
+python src/features/prepare_data.py
