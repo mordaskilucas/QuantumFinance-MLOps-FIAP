@@ -38,7 +38,7 @@ app:
 
 # Executar testes
 test:
-	pytest tests/ -v
+	python run_tests.py
 
 # Executar sistema completo
 run:
